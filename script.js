@@ -24,14 +24,14 @@ document.getElementById('replacementForm').addEventListener('submit', function(e
     }, 1000);
 });
 
-// Auto-fill today's date
-window.addEventListener('load', function() {
-    const today = new Date();
-    const day = String(today.getDate()).padStart(2, '0');
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const year = today.getFullYear();
-    const dateField = document.querySelector('input[name="date"]');
-    if (dateField && !dateField.value) {
-        dateField.value = `${day}/${month}/${year}`;
-    }
-});
+// // Auto-fill today's date
+// window.addEventListener('load', function() {
+//     const today = new Date();
+//     const day = String(today.getDate()).padStart(2, '0');
+//     const month = String(today.getMonth() + 1).padStart(2, '0');
+//     const year = today.getFullYear();
+//     const dateField = document.querySelector('input[name="date"]');
+//     if (dateField && !dateField.value) {
+//         dateField.value = `${day}/${month}/${year}`;
+//     }
+// });

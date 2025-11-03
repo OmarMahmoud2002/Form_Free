@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,105 +9,127 @@
 <body>
     <div class="container">
         <div class="form-header">
-            <h1>نموذج استبدال الأجهزة المتعطلة خلال 24 ساعة فقط</h1>
-            <h2>iPHONE DOA REPLACEMENT ISSUE FORM</h2>
+            <h1>iPHONE DOA REPLACEMENT ISSUE FORM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  نموذج استبدال الأجهزة المتعطلة خلال 24 ساعة فقط</h1>
         </div>
 
         <form id="replacementForm">
             <!-- Store Information -->
             <div class="section">
-                <div class="section-title">معلومات المعرض<br>Store Information</div>
-                <div class="form-row">
-                    <div class="form-field half">
-                        <label>رمز المعرض:<br>Store Code:</label>
-                        <input type="text" name="storeCode" required>
-                    </div>
-                    <div class="form-field half">
-                        <label>التاريخ:<br>Date (DD/MM/YYYY):</label>
-                        <input type="date" name="date" placeholder="DD/MM/YYYY" required>
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">Store<br>Information</span>
+                        <span class="arabic">معلومات المعرض</span>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-field full">
-                        <label>اسم المعرض:<br>Store Name:</label>
-                        <input type="text" name="storeName" required>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Store Code: رمز المعرض</label>
+                            <input type="text" name="storeCode" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Date (DD/MM/YYYY):التاريخ</label>
+                            <input type="date" name="date" placeholder="DD/MM/YYYY" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label>Store Name:اسم المعرض</label>
+                            <input type="text" name="storeName" required>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Old Device Information -->
             <div class="section">
-                <div class="section-title">معلومات الجهاز القديم<br>OLD DEVICE INFORMATION</div>
-                <div class="form-row">
-                    <div class="form-field half">
-                        <label>الموديل:<br>Model:</label>
-                        <input type="text" name="model" required>
-                    </div>
-                    <div class="form-field half">
-                        <label>اللون:<br>Color:</label>
-                        <input type="text" name="color" required>
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">OLD DEVICE<br>INFORMATION</span>
+                        <span class="arabic">معلومات الجهاز القديم</span>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-field half">
-                        <label>رقم السيريال:<br>Serial No.:</label>
-                        <input type="text" name="serialNo" required>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Model:الموديل</label>
+                            <input type="text" name="model" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Color:اللون</label>
+                            <input type="text" name="color" required>
+                        </div>
                     </div>
-                    <div class="form-field half">
-                        <label>العطل:<br>Problem:</label>
-                        <input type="text" name="problem" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-field full">
-                        <label>رقم IMEI:<br>IMEI:</label>
-                        <input type="text" name="imei" required>
+                    <div class="form-row">
+
+                        <div class="form-field half serial-imei-wrapper">
+                            <div class="serial-field">
+                                <label>Serial No.:رقم السيريال</label>
+                                <input type="text" name="serialNo" required>
+                            </div>
+                            <div class="imei-field">
+                                <label>IMEI: رقم IMEI</label>
+                                <input type="text" name="imei" required>
+                            </div>
+                        </div>
+                                                <div class="form-field half problem-field">
+                            <label>Problem:العطل</label>
+                            <textarea name="problem" rows="3" required></textarea>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
             <!-- Device Inspection & GSX Verification -->
             <div class="section">
-                <div class="section-title">معاينة الجهاز والتحقق<br>Device Inspection & GSX Verification</div>
-                <div class="form-row">
-                    <div class="form-field half">
-                        <label>فترة الضمان:<br>Warranty Period as per GSX (Days):</label>
-                        <input type="text" name="warrantyPeriod" required>
-                    </div>
-                    <div class="form-field half">
-                        <label>وجود سوائل:<br>Liquid Damage (Y/N):</label>
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="liquidDamage" value="yes" required>
-                                <span>Yes</span>
-                            </label>
-                            <label>
-                                <input type="radio" name="liquidDamage" value="no" required>
-                                <span>No</span>
-                            </label>
-                        </div>
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">Device Inspection & GSX<br>Verification</span>
+                        <span class="arabic">حالة الجهاز </span>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-field half">
-                        <label>حالة الجهاز الفنية:<br>Physical Condition of the Device:</label>
-                        <textarea name="physicalCondition" rows="1" required></textarea>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Warranty Period as per GSX (Days):فترة الضمان</label>
+                            <input type="text" name="warrantyPeriod" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Liquid Damage (Y/N):وجود سوائل</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="liquidDamage" value="yes">
+                                    <span>Yes</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="liquidDamage" value="no">
+                                    <span>No</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-field half">
-                        <label>حالة الجهاز:<br>Device Packaging:</label>
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="packaging" value="fullBox">
-                                <span>علبة كاملة Full Box</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" name="packaging" value="emptyBox">
-                                <span>علبة فارغة Empty Box</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" name="packaging" value="other">
-                                <span>أخرى Other</span>
-                            </label>
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Physical Condition of the Device: حالة الجهاز الفنية</label>
+                            <textarea name="physicalCondition" rows="3" required></textarea>
+                        </div>
+                        <div class="form-field half">
+                            <label style="margin-bottom: 15px;">Device Packaging:حالة الجهاز</label>
+                            <div class="radio-group-vertical">
+                                <label>
+                                    <input type="radio" name="devicePackaging" value="fullBox">
+                                    <span>Full Box علبة كاملة</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="devicePackaging" value="emptyBox">
+                                    <span>Empty Box علبة فارغة</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="devicePackaging" value="other">
+                                    <span>Other أخرى</span>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -115,21 +137,132 @@
 
             <!-- Device Checked by -->
             <div class="section">
-                <div class="section-title">تم الفحص بواسطة الموظف<br>Device Checked by Employee</div>
-                <div class="form-row">
-                    <div class="form-field half">
-                        <label>الرقم الوظيفي:<br>Employee ID:</label>
-                        <input type="text" name="employeeId" required>
-                    </div>
-                    <div class="form-field half">
-                        <label>اسم الموظف:<br>Employee Name:</label>
-                        <input type="text" name="employeeName" required>
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">Device<br>Checked by</span>
+                        <span class="arabic"> فحص الجهاز بواسطة</span>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-field full">
-                        <label>التوقيع:<br>Signatures:</label>
-                        <input type="text" name="signatures" placeholder="التوقيع هنا" required>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Employee ID:الرقم الوظيفي</label>
+                            <input type="text" name="employeeId" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Employee Name:اسم الموظف</label>
+                            <input type="text" name="employeeName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label>Signatures:التوقيع</label>
+                            <input type="text" name="signatures" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Employee Commitment Statement -->
+            <div class="commitment-section">
+                <h3 class="commitment-title" >إقرار تعهد الموظف</h3>
+                <p class="commitment-text">اقر بانني قد استلمت الجهاز القديم بكامل الملحقات علبة كاملة وسلمت العميل جهاز جديد بديل بكامل الملحقات وان الجهاز القديم خالي من عيوب سوء استخدام في الجهاز القديم.</p>
+            </div>
+
+            <!-- Replacement Confirmed By -->
+            <div class="section">
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">Replacement<br>Confirmed By</span>
+                        <span class="arabic">استبدال الجهاز بموافقة</span>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Store Manager ID:الرقم الوظيفي لمدير المعرض</label>
+                            <input type="text" name="storeManagerId" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Store Manager:اسم مدير المعرض</label>
+                            <input type="text" name="storeManager" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Signatures:التوقيع</label>
+                            <input type="text" name="managerSignatures" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Store Stamp:ختم المعرض</label>
+                            <input type="text" name="storeStamp" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Device Information -->
+            <div class="section">
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">NEW DEVICE<br>INFORMATION</span>
+                        <span class="arabic">معلومات الجهاز الجديد</span>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Model:الموديل</label>
+                            <input type="text" name="newModel" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Color:اللون</label>
+                            <input type="text" name="newColor" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Serial No.:رقم السيريال</label>
+                            <input type="text" name="newSerialNo" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>IMEI:رقم IMEI</label>
+                            <input type="text" name="newImei" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Commitment Statement -->
+            <div class="commitment-section">
+                <h3 class="commitment-title">إقرار تعهد العميل</h3>
+                <p class="commitment-text">اقر بانني قد تسلمت جهاز جديد بديل بكامل الملحقات علبة كاملة وسلمت جهازي القديم للمعرض</p>
+            </div>
+
+            <!-- Customer Information -->
+            <div class="section">
+                <div class="section-sidebar">
+                    <div class="sidebar-text">
+                        <span class="english">Customer<br>Information</span>
+                        <span class="arabic">معلومات العميل</span>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="form-row">
+                        <div class="form-field half">
+                            <label>Name: اسم العميل</label>
+                            <input type="text" name="customerName" required>
+                        </div>
+                        <div class="form-field half">
+                            <label>Mobile No.: رقم العميل</label>
+                            <input type="text" name="customerMobile" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label>Signatures:توقيع العميل</label>
+                            <input type="text" name="customerSignatures" required>
+                        </div>
                     </div>
                 </div>
             </div>
