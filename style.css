@@ -196,10 +196,13 @@ textarea {
 
 .problem-field textarea {
     min-height: 11mm;
+    padding: 2px 5px;
 }
 
 textarea[name="physicalCondition"] {
-    min-height: 13mm;
+    min-height: 18mm;
+    min-width: 94%;
+        padding: 2px 5px;
 }
 
 .serial-field,
@@ -501,12 +504,15 @@ display: inline-block;
     /* حقل العطل: (5mm + 0.8mm gap + 5mm) = 10.8mm */
     .problem-field textarea {
         min-height: 11mm;
+        padding: 2px 5px;
     }
 
     /* صف "حالة الجهاز الفنية" و "حالة الجهاز (العلبة)" */
     textarea[name="physicalCondition"] {
         /* تقليل الارتفاع */
-        min-height: 13mm;
+        min-height: 17mm;
+        min-width: 93%;
+            padding: 1px 4px;
     }
 
     .radio-group-vertical {
