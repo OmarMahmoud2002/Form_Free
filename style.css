@@ -115,9 +115,8 @@ display: block;
     line-height: 1.2;
 }
 
-input[type="text"],
 input[type="date"],
-textarea {
+input[type="text"] {
     width: 100%;
     padding: 0.8mm;
     border: 1px solid #ccc;
@@ -128,14 +127,37 @@ textarea {
     height: 6mm;
 }
 
-input[type="date"] {
+input[type="date"],
+input[type="text"] {
     color: #000;
     text-align: left;
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator {
-    cursor: pointer;
-    opacity: 0.8;
+/* تنسيق Flatpickr */
+.flatpickr-calendar {
+    font-family: 'Arial', sans-serif;
+    background: white;
+    border: 1pt solid #ccc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.flatpickr-calendar.open {
+    display: block !important;
+}
+
+.flatpickr-day.selected {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.flatpickr-day:hover {
+    background-color: #e0e0e0;
+}
+
+/* إخفاء أيقونة التقويم الافتراضية */
+input[type="text"]::-webkit-calendar-picker-indicator {
+    display: none;
 }
 
 textarea {
@@ -561,5 +583,10 @@ display: inline-block;
     direction: rtl;
     padding-bottom: 3.4mm;
     padding-top: 2.4mm;
+    }
+
+    /* إخفاء Flatpickr عند الطباعة */
+    .flatpickr-calendar {
+        display: none !important;
     }
 }

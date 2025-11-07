@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>نموذج استبدال الأجهزة المتعطلة - iPhone DOA Replacement Issue Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,7 +30,7 @@
                         </div>
                         <div class="form-field half">
                             <label>Date (DD/MM/YYYY):التاريخ</label>
-                            <input type="date" name="date" required>
+                            <input type="text" name="date" id="dateField" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -274,6 +275,7 @@
         </form>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
 </body>
 </html>

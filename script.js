@@ -24,14 +24,20 @@ document.getElementById('replacementForm').addEventListener('submit', function(e
     }, 1000);
 });
 
-// Auto-fill today's date
+// تهيئة Flatpickr لحقل التاريخ
 window.addEventListener('load', function() {
     const today = new Date();
     const year = today.getFullYear();
     const month = String(today.getMonth() + 1).padStart(2, '0');
     const day = String(today.getDate()).padStart(2, '0');
-    const dateField = document.querySelector('input[name="date"]');
-    if (dateField && !dateField.value) {
-        dateField.value = `${year}-${month}-${day}`;
-    }
+    const dateValue = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    
+    flatpickr("#dateField", {
+        dateFormat: "d/m/Y",  // يوم / شهر / سنة (DD/MM/YYYY)
+        locale: "ar",         // اللغة العربية
+        defaultDate: dateValue, // التاريخ الافتراضي (اليوم)
+        enableTime: false,    // بدون وقت
+        mode: "single",       // اختيار تاريخ واحد فقط
+        closeOnSelect: true   // إغلاق التقويم عند الاختيار
+    });
 });
