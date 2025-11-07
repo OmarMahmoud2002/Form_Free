@@ -128,6 +128,16 @@ textarea {
     height: 6mm;
 }
 
+input[type="date"] {
+    color: #000;
+    text-align: left;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 textarea {
     resize: none;
     min-height: 5mm;
