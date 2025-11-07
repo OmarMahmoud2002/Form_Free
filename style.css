@@ -7,39 +7,39 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
-    padding: 30px;
+    padding: 20px;
     direction: ltr;
 }
 
 .container {
-max-width: 1100px;
-    margin: 5px auto;
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
     background-color: white;
-    padding: 45px 80px;
-    box-shadow: none;
+    padding: 10mm;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border: none;
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom: 3px solid #000;
+    margin-bottom: 3px;
+    padding: 0mm 0 0mm 0;
 }
 
 .form-header h2 {
-    font-size: 16px;
+    font-size: 10pt;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 0;
 }
 
 .form-header h1 {
-    font-size: 14px;
+font-size: 10pt;
     font-weight: bold;
+    margin: 1px 0PX 10PX 0PX;
 }
 
 .section {
-    border: 2px solid #000;
+    border: 1.5pt solid #000;
     margin-bottom: 0;
     display: flex;
     flex-direction: row;
@@ -47,12 +47,12 @@ max-width: 1100px;
 
 .section-sidebar {
     /* background-color: #d3d3d3; */
-    border-right: 2px solid #000;
-    width: 100px;
+    border-right: 1.5pt solid #000;
+    width: 17mm;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 4px;
+    padding: 1.5mm 0.5mm;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
@@ -63,13 +63,13 @@ max-width: 1100px;
     transform: rotate(180deg);
     text-align: center;
     font-weight: bold;
-    font-size: 15px;
-    line-height: 1.3;
+    font-size: 9pt;
+    line-height: 1.2;
 }
 
 .sidebar-text .english {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 1.5mm;
 }
 
 .sidebar-text .arabic {
@@ -82,7 +82,7 @@ max-width: 1100px;
 
 .form-row {
     display: flex;
-    border-bottom: 2px solid #000;
+    border-bottom: 1.5pt solid #000;
 }
 
 .form-row:last-child {
@@ -90,8 +90,8 @@ max-width: 1100px;
 }
 
 .form-field {
-    padding: 8px;
-    border-right: 2px solid #000;
+    padding: 0.8mm 1.5mm;
+    border-right: 1.5pt solid #000;
 }
 
 .form-field:last-child {
@@ -108,29 +108,29 @@ max-width: 1100px;
 }
 
 label {
-    display: block;
-    font-size: 15px;
+display: block;
+    font-size: 10pt;
     font-weight: bold;
-    margin-bottom: 15px;
-    line-height: 1.3;
+    margin-bottom: 2.5mm;
+    line-height: 1.2;
 }
 
 input[type="text"],
 input[type="date"],
 textarea {
     width: 100%;
-    padding: 7px;
+    padding: 0.8mm;
     border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 14px;
+    border-radius: 0;
+    font-size: 10pt;
     font-weight: bold;
     font-family: 'Arial', sans-serif;
-    height: 38px;
+    height: 6mm;
 }
 
 textarea {
-    resize: vertical;
-    min-height: 90px;
+    resize: none;
+    min-height: 5mm;
 }
 
 .problem-field {
@@ -145,13 +145,37 @@ textarea {
 .serial-imei-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.8mm;
+    /* border-bottom: 1.5pt solid #000; */
+
+}
+.serial-field {
+    padding-bottom: 0.6mm;
+    border-bottom: 1.5pt solid #000;
+}
+
+.serial-imei-wrapper label {
+    margin-bottom: 0.5mm;
+}
+
+.serial-field {
+    padding-bottom: 0.8mm;
+}
+
+.problem-field textarea {
+    min-height: 11mm;
+}
+
+textarea[name="physicalCondition"] {
+    min-height: 13mm;
 }
 
 .serial-field,
 .imei-field {
     flex: 1;
 }
+
+
 
 .serial-field label,
 .imei-field label {
@@ -181,17 +205,17 @@ textarea {
 .section:nth-child(2) label,
 .section:nth-child(7) label {
     background-color: #d3d3d3;
-    padding: 6px 8px;
+    padding: 4px 8px;
     border-radius: 3px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
 
 .radio-group {
     display: flex;
-    gap: 30px;
-    margin-top: 8px;
+    gap: 3mm;
+    margin-top: 0.8mm;
     align-items: center;
 }
 
@@ -199,20 +223,20 @@ textarea {
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 10pt;
     margin-bottom: 0;
     cursor: pointer;
-    gap: 10px;
+    gap: 1.2mm;
     position: relative;
 }
 
 .radio-group input[type="radio"] {
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    width: 4mm;
+    height: 4mm;
     appearance: none;
     -webkit-appearance: none;
-    border: 2px solid #000;
+    border: 1.5pt solid #000;
     background-color: #fff;
     position: relative;
 }
@@ -223,7 +247,7 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 22px;
+    font-size: 9pt;
     font-weight: bold;
     color: #000;
 }
@@ -231,29 +255,31 @@ textarea {
 .radio-group-vertical {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 8px;
+    gap: 0.4mm;
+    min-height: 13mm;
+    margin-top: 0;
+    justify-content: space-around;
 }
 
 .radio-group-vertical label {
     display: flex;
     align-items: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 9pt;
     margin-bottom: 0;
     cursor: pointer;
-    gap: 10px;
+    gap: 1.5mm;
     position: relative;
     justify-content: flex-start; /* تأكد أن النص يبدأ من اليسار */
 }
 
 .radio-group-vertical input[type="radio"] {
     cursor: pointer;
-    width: 250px;
-    height: 30px;
+    width: 38mm;
+    height: 5mm;
     appearance: none;
     -webkit-appearance: none;
-    border: 2px solid #000;
+    border: 1.5pt solid #000;
     background-color: #fff;
     position: relative;
     flex-shrink: 0;
@@ -262,12 +288,12 @@ textarea {
 }
 
 .radio-group-vertical input[type="radio"]:checked::after {
-    content: '✓';
+    content: '✔';
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 22px;
+    font-size: 11pt;
     font-weight: bold;
     color: #000;
 }
@@ -275,31 +301,32 @@ textarea {
 
 
 .commitment-section {
-    /* border: 2px solid #000; */
+    /* border: 1.5pt solid #000; */
     border-top: none;
-    padding: 8px 12px;
+    padding: 0.8mm 1.5mm;
     background-color: white;
     text-align: right; /* تأكد أن العنوان المصغر يتم محاذاته لليمين */
 }
 
-.commitment-title {
-    display: inline-block; /* يجعل عرض الخط مطابق لطول النص فقط */
-    border-bottom: 2px solid #000; /* الخط تحت الكلمة */
+    .commitment-title {
+display: inline-block;
+    border-bottom: 1.5pt solid #000;
     padding-bottom: 0px;
-    font-size: 16px;
-    font-weight: 900;
+    font-size: 11pt;
+    font-weight: bold;
     text-align: right;
-    margin-bottom: 4px;
-}
+    margin-top: 1.4mm;
+    }
 
-.commitment-text {
-    font-size: 14px;
-    /* font-weight: bold; */
-    line-height: 1.5;
+    .commitment-text {
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.2;
     text-align: right;
     direction: rtl;
-    padding-bottom: 14px;
-}
+    padding-bottom: 3.4mm;
+    padding-top: 2.4mm;
+    }
 
 
 
@@ -325,178 +352,204 @@ textarea {
     background-color: #0056b3;
 }
 
-/* Print styles for PDF */
 @media print {
     @page {
         size: A4 portrait;
-        margin: 5mm 10mm 5mm 10mm;
+        /* تقليل الهوامش لإعطاء مساحة أكبر */
+        margin: 6mm 11mm;
     }
-    
+
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        box-sizing: border-box;
     }
-    
+
     body {
         background-color: white;
         padding: 0;
         margin: 0;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
+        font-family: 'Arial', sans-serif;
+        font-size: 8pt;
     }
-    
-    body::before,
-    body::after {
-        display: none !important;
-    }
-    
+
     .container {
         box-shadow: none;
         border: none;
-        padding: 3px 15px 0px 15px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
         max-width: 100%;
-        transform: scale(0.92);
-        transform-origin: top center;
-        margin-top: 0;
-        margin-bottom: 0;
+        transform: none;
     }
-    
+
     .button-container {
         display: none !important;
     }
-    
+
     .form-header {
-        margin-bottom: 2px;
-        padding-bottom: 3px;
-        border-bottom-width: 2px;
+        /* تقليل المسافات الرأسية */
+        margin-bottom: 0;
+        padding: 5mm 0 2mm 0;
+        /* border-bottom: 2pt solid #000; */
     }
-    
+
     .form-header h2 {
-        font-size: 12px;
-        margin-bottom: 1px;
+        font-size: 10pt;
+        margin-bottom: 0;
     }
-    
+
     .form-header h1 {
-        font-size: 11px;
+        font-size: 10pt;
+        margin: 0;
     }
     
     .section {
         page-break-inside: avoid;
-        border-width: 1.5px;
+        border: 1.5pt solid #000;
+        margin-bottom: 0;
     }
-    
+
     .section-sidebar {
-        width: 80px;
-        border-right-width: 1.5px;
-        padding: 5px 2px;
+        width: 18mm;
+        border-right: 1.5pt solid #000;
+        padding: 1.5mm 0.5mm;
     }
-    
+
     .sidebar-text {
-        font-size: 9px;
+        font-size: 8pt;
         line-height: 1.2;
     }
-    
+
     .sidebar-text .english {
-        margin-bottom: 5px;
+        margin-bottom: 1.5mm;
     }
-    
+
     .form-row {
-        border-bottom-width: 1.5px;
+        border-bottom: 1.5pt solid #000;
     }
-    
+
     .form-field {
-        padding: 2px;
-        border-right-width: 1.5px;
+        /* تقليل الحشو العمودي */
+        padding: 0.8mm 1.5mm;
+        border-right: 1.5pt solid #000;
     }
-    
+
     label {
-        font-size: 9px;
-        margin-bottom: 2px;
-        line-height: 1.2;
+        font-size: 8pt;
         font-weight: bold;
+        /* تقليل المسافة تحت العنوان */
+        margin-bottom: 0.8mm;
+        line-height: 1.1;
     }
-    
+
     input[type="text"],
     input[type="date"],
     textarea {
         border: 1px solid #ccc !important;
-        font-size: 10px;
+        font-size: 9pt;
         font-weight: bold;
-        padding: 3px;
+        padding: 0.8mm;
+        /* تقليل ارتفاع الحقول */
+        height: 6mm;
     }
-    
+
     textarea {
-        min-height: 32px;
+        resize: none;
+        min-height: 5mm;
     }
-    
-    .problem-field textarea {
-        min-height: 36px;
-    }
-    
+
+    /* --- مطابقة ارتفاعات الحقول (بأبعاد أصغر) --- */
+
     .serial-imei-wrapper {
-        gap: 5px;
+        gap: 0.8mm;
     }
-    
-    .commitment-section {
-        border-width: 1.5px;
-        border-top: none;
-        padding: 2px 6px;
+    .serial-imei-wrapper label { margin-bottom: 0.5mm; }
+
+    /* حقل العطل: (5mm + 0.8mm gap + 5mm) = 10.8mm */
+    .problem-field textarea {
+        min-height: 11mm;
     }
-    
-    .commitment-title {
-        font-size: 10px;
-        margin-bottom: 1px;
-        font-weight: bold;
+
+    /* صف "حالة الجهاز الفنية" و "حالة الجهاز (العلبة)" */
+    textarea[name="physicalCondition"] {
+        /* تقليل الارتفاع */
+        min-height: 13mm;
     }
-    
-    .commitment-text {
-        font-size: 9px;
-        font-weight: bold;
-        line-height: 1.2;
-        padding-bottom: 2px;
-        padding-top: 2px;
-    }
-    
-    .radio-group {
-        gap: 15px;
-    }
-    
-    .radio-group input[type="radio"] {
-        width: 20px;
-        height: 20px;
-        border-width: 1.5px;
-    }
-    
-    .radio-group input[type="radio"]:checked::after {
-        font-size: 16px;
-    }
-    
-    .radio-group label {
-        font-size: 9px;
-        font-weight: bold;
-        gap: 6px;
-    }
-    
+
     .radio-group-vertical {
-        gap: 3px;
+        /* تقليل الفواصل والارتفاع */
+        gap: 0.4mm;
+        min-height: 13mm;
+        margin-top: 0;
+        justify-content: space-around;
     }
-    
-    .radio-group-vertical input[type="radio"] {
-        width: 120px;
-        height: 16px;
-        border-width: 1.5px;
+
+    /* --- تنسيق مربعات الاختيار (Radio) --- */
+
+    .radio-group {
+        gap: 3mm;
+        margin-top: 0.8mm;
     }
-    
-    .radio-group-vertical input[type="radio"]:checked::after {
-        font-size: 12px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+
+    .radio-group input[type="radio"] {
+        /* تقليل حجم المربع */
+        width: 4mm;
+        height: 4mm;
+        border-width: 1.5pt;
     }
-    
+
+    .radio-group input[type="radio"]:checked::after {
+        font-size: 10pt;
+    }
+
+    .radio-group label {
+        font-size: 10pt;
+        gap: 1.2mm;
+    }
+
     .radio-group-vertical label {
-        font-size: 8px;
-        font-weight: bold;
-        gap: 8px;
+        font-size: 8pt;
+        padding-left: 35px;
+
+        gap: 1.5mm;
+    }
+
+    .radio-group-vertical input[type="radio"] {
+        width: 33mm;
+        /* تقليل ارتفاع المربع */
+        height: 5mm;
+        border-width: 1.5pt;
+    }
+
+    .radio-group-vertical input[type="radio"]:checked::after {
+        font-size: 10pt;
+    }
+
+    /* --- أقسام الإقرار (Commitment) --- */
+    .commitment-section {
+        border-top: none;
+        /* تقليل الحشو العمودي */
+        padding: 0.8mm 1.5mm;
+    }
+
+    .commitment-title {
+display: inline-block;
+    border-bottom: 1.5pt solid #000;
+    padding-bottom: 0px;
+    font-size: 11pt;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 1.4mm;
+    }
+
+    .commitment-text {
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: right;
+    direction: rtl;
+    padding-bottom: 3.4mm;
+    padding-top: 2.4mm;
     }
 }
