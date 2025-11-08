@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج تسوية غرامة خدمة بيع لاسلكي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">    
+<link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html" class="sidebar-btn">استبدال أجهزة</a>
+        <a href="index2.html" class="sidebar-btn active">تسوية غرامة</a>
+    </div>
+    
+    <div class="container" id="formContainer">
+        <div class="form-wrapper">
+            <!-- Header -->
+            <div class="header">
+                <div class="title">نموذج تسوية غرامة خدمة بيع لاسلكي</div>
+                 <!-- <img src="stc.jpg" alt="STC Logo" class="logo"> -->
+              <img src="data:image/webp;base64,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" alt="STC Logo" class="logo">
+
+            </div>
+        <section >
+            <!-- Section: بيانات قبل الموظف -->
+             <section class="sec1">
+            <div class="section-title">يعبأ من قبل الموظف</div>
+            
+            <table class="form-table" style="border-collapse: collapse;">
+                <tr>
+                    <td class="label-cell">اسم العميل</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">رقم الهوية</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">رقم الخدمة</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">رقم حساب الفوترة</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">باقة الخدمة</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">مدة العقد</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">تاريخ تأسيس الخدمة</td>
+                    <td class="input-cell"><input type="text" class="form-input date-picker" ></td>
+                    <td class="label-cell">تاريخ إلغاء الخدمة</td>
+                    <td class="input-cell"><input type="text" class="form-input date-picker" ></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">الرقم التسلسلي للجهاز</td>
+                    <td class="input-cell" colspan="3"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">سبب إعادة الجهاز</td>
+                    <td class="input-cell" colspan="3"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell" rowspan="1" style="line-height: 1.4;">رقم أمر إلغاء الخدمة<br>بنظام تواصل</td>
+                    <td class="input-cell" rowspan="1"><input type="text" class="form-input tall-input"></td>
+                    <td class="label-cell" style="line-height: 1.4;">رقم أمر إعادة الجهاز<br>للمخزون</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell small-text" style="padding: 7px 2px;">رقم بلاغ استرداد الدفعة<br>المقدمة بنظام البلاغات<br>في قنوات</td>
+                    <td class="input-cell" colspan="3"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">ملاحظات</td>
+                    <td class="input-cell" colspan="3"><textarea class="form-textarea"></textarea></td>
+                </tr>
+            </table>
+            </section>
+
+            <!-- Terms Section -->
+            <div class="terms-section">
+                <div class="terms-title">شروط تنفيذ عملية إرجاع العمل لايد خدمات بيع لاسلكي:</div>
+                <div class="terms-content">
+                    <div class="term-item">1- موافق من 72 ساعة من وقت تسليم الخدمة للعميل، حيث لا يقبل طلب الإلحاق إلا في حال مرور أكثر من 72 ساعة.</div>
+                    <div class="term-item">2- تسليم العميل لجهاز الخدمة (الراوتر) إلى أحد مكاتب المبيعات.</div>
+                    <div class="term-item">3- أن يكون سبب الإلحاء هو سوء التغطية الشبكة لدى موقع العميل.</div>
+                    <div class="term-item">4- أن يكون الجهاز سليم من الخدوش والكسور وأي عيوب.</div>
+                    <div class="term-item">5- أن لا تكون علبة الجهاز تكون سليمة من القطع والثقب.</div>
+                    <div class="term-item">6- توفر جميع الملحقات وتكون بحالة سليمة.</div>
+                    <div class="term-item">7- توفر جميع الكبسات وبحالة سليمة.</div>
+                    <div class="term-item">8- يتم عمل تشغيل الجهاز للتأكد من أنه يعمل فقط.</div>
+                    <div class="term-item">9- التأكد من مطابقة الرقم التسلسلي الخاص بالجهاز بالرقم التسلسلي الموجود على كل من علبة الجهاز والنظام.</div>
+                    <div class="term-item">10- يتم إرجاع الجهاز للمخزون بعد التأكد من جميع النقاط أعلاه.</div>
+                    <div class="term-item">11- يتم تقديم بلاغ استرداد الدفعة المقدمة بعد تسوية الفجوة ويسرح الخدمة أو نظام تواصل.</div>
+                </div>
+            </div>
+
+            <!-- Signatures Section -->
+            <table class="signature-table" border-collapse: collapse;>
+                <tr>
+                    <td class="label-cell">الموظف</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">الرقم الوظيفي</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">التوقيع</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">التاريخ</td>
+                    <td class="input-cell"><input type="text" class="form-input date-picker" ></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">مدير المكتب</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">الرقم الوظيفي</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">التوقيع</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">التاريخ</td>
+                    <td class="input-cell"><input type="text" class="form-input date-picker"></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">إسم المكتب</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                    <td class="label-cell">الختم</td>
+                    <td class="input-cell"><input type="text" class="form-input"></td>
+                </tr>
+            </table>
+            </section>
+        </div>
+    </div>
+
+    <!-- Download Button -->
+    <div class="download-section">
+        <button id="downloadBtn" class="download-btn">تحميل النموذج PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/ar.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
