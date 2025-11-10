@@ -6,45 +6,33 @@ document.addEventListener('DOMContentLoaded', function() {
         flatpickr(".date-picker", {
             dateFormat: "d/m/Y",
             locale: "ar",
-            allowInput: true
+            allowInput: true,
+            errorHandler: function(error) {
+                // تجاهل أخطاء التاريخ غير الصحيحة
+                console.warn('تحذير في حقل التاريخ:', error);
+            }
         });
         console.log('تم تفعيل حقول التاريخ بنجاح');
     } else {
         console.error('مكتبة flatpickr غير محملة');
     }
     
-    // دالة للتحقق من ملء جميع الحقول
-    function validateAllFields() {
-        const inputs = document.querySelectorAll('.form-input');
-        const textareas = document.querySelectorAll('.form-textarea');
-        const emptyFields = [];
-        
-        // التحقق من الحقول النصية
-        inputs.forEach((input, index) => {
-            if (!input.value.trim()) {
-                emptyFields.push(index + 1);
-            }
-        });
-        
-        // التحقق من حقول النصوص الكبيرة
-        textareas.forEach((textarea, index) => {
-            if (!textarea.value.trim()) {
-                emptyFields.push('textarea-' + (index + 1));
-            }
-        });
-        
-        return emptyFields;
-    }
-    
     const downloadBtn = document.getElementById('downloadBtn');
     
     if (downloadBtn) {
         downloadBtn.addEventListener('click', async function() {
-            // التحقق من ملء جميع الحقول
-            const emptyFields = validateAllFields();
+            // التحقق من ملء جميع الحقول المطلوبة في النموذج
+            const allInputs = document.querySelectorAll('input[type="text"], textarea');
+            let hasEmptyFields = false;
             
-            if (emptyFields.length > 0) {
-                alert('يرجى ملء جميع الحقول المطلوبة قبل التحميل!\nعدد الحقول الفارغة: ' + emptyFields.length);
+            allInputs.forEach((input) => {
+                if (!input.value.trim()) {
+                    hasEmptyFields = true;
+                }
+            });
+            
+            if (hasEmptyFields) {
+                alert('يرجى ملء جميع الحقول المطلوبة قبل التحميل');
                 return;
             }
             
@@ -63,10 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 // الحصول على العنصر المراد تحويله لـ PDF
                 const element = document.getElementById('formContainer');
                 
+                // الحصول على اسم العميل من الخانة الأولى
+                const customerNameInput = document.querySelector('.form-table input[type="text"]');
+                const customerName = customerNameInput ? customerNameInput.value.trim() : 'عميل';
+                
+                // تنظيف اسم العميل (إزالة الأحرف غير المسموحة)
+                const sanitizedName = customerName.replace(/[^a-zA-Z0-9ء-ي\s]/g, '').trim() || 'عميل';
+                
                 // إعدادات PDF محسّنة
                 const opt = {
                     margin: [5, 5, 5, 5],
-                    filename: 'نموذج_تسوية_غرامة.pdf',
+                    filename: `نموذج_تسوية_${sanitizedName}.pdf`,
                     image: { 
                         type: 'jpeg', 
                         quality: 0.98 

@@ -110,11 +110,11 @@ body {
 }
 
 .logo {
-    width: 106px;
-    height: 90px;
+    width: 80px;
+    height: 70px;
     object-fit: contain;
     flex-shrink: 0;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .title {
@@ -137,14 +137,15 @@ flex: 1;
 .section-title {
     background-color: #d3d3d3;
     text-align: center;
-    padding: 0px;
+    padding: 2px;
     font-weight: bold;
     font-size: 18px;
     border-top: 3px double #000;
     border-right: 3px double #000;
     border-left: 3px double #000;
-
-    margin-bottom: 0;
+    border-bottom: 3px double #000;
+    margin-top: 10px;
+    margin-bottom: 1px;
 }
 
 /* Tables */
@@ -157,19 +158,22 @@ flex: 1;
 
 .form-table td,
 .signature-table td {
-    border: 3px double #000;
-    /* padding: 0px 2px; */
-    font-size: 14px;
-    height: 7px !important;
+    border: 1px solid #000;
+    padding: 0px 2px;
+    font-size: 15px;
+    font-weight: 600;
+    height: 43px !important;
     vertical-align: middle;
+    word-spacing: 3px;
 }
 
 .label-cell {
     background-color: #d3d3d3;
     font-weight: normal;
     text-align: center;
-    width: 20%;
+    width: 24%;
     vertical-align: middle;
+    /* word-spacing: 3px; */
     /* padding: 6px 8px; */
 }
 
@@ -187,9 +191,9 @@ flex: 1;
     border: none;
     outline: none;
     background: transparent;
-    padding: 6px 8px;
+    padding: 1px 5px 2px 5px;
     font-family: "Scheherazade New", serif;
-    font-size: 12px;
+    font-size: 14px;
     direction: rtl;
     text-align: right;
     vertical-align: middle;
@@ -247,7 +251,7 @@ flex: 1;
 }
 
 .term-item {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.3;
     margin-bottom: 2px;
     text-align: right;
@@ -261,9 +265,11 @@ flex: 1;
 }
 
 .signature-table .label-cell {
-    width: 18%;
-    font-size: 12px;
-    padding: 6px 8px;
+    width: 20%;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 2px 6px;
+    
 }
 
 .signature-table .input-cell {
@@ -316,7 +322,7 @@ flex: 1;
 .form-input::placeholder,
 .form-textarea::placeholder {
     color: #999;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .form-input:focus,
@@ -395,18 +401,30 @@ span.flatpickr-weekday {
     .form-table,
     .signature-table {
         border-collapse: collapse;
+            /* word-spacing: 3px; */
+
     }
 
     .form-table td,
     .signature-table td {
         border: 0.5px solid #000 !important;
+        padding: 0px 2px !important;
+        word-spacing: 3px !important;
+    }
+    
+    .label-cell {
+        word-spacing: 3px !important;
     }
 
     .section-title {
         border-top: 0.5px solid #000 !important;
         border-right: 0.5px solid #000 !important;
         border-left: 0.5px solid #000 !important;
-        border-bottom: none !important;
+        border-bottom: 0.5px solid #000 !important;
+            margin-top: 10px;
+    margin-bottom: 1px;
+    padding: 2px;
+        /* border-bottom: none !important; */
     }
 
     .terms-section {
@@ -416,6 +434,7 @@ span.flatpickr-weekday {
     .form-input,
     .form-textarea {
         border: none !important;
+        padding: 1px 5px 2px 5px !important;
         background: transparent !important;
     }
 
