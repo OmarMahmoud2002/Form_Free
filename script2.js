@@ -22,19 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadBtn) {
         downloadBtn.addEventListener('click', async function() {
             // التحقق من ملء جميع الحقول المطلوبة في النموذج
-            const allInputs = document.querySelectorAll('input[type="text"], textarea');
-            let hasEmptyFields = false;
+            // const allInputs = document.querySelectorAll('input[type="text"], textarea');
+            // let hasEmptyFields = false;
             
-            allInputs.forEach((input) => {
-                if (!input.value.trim()) {
-                    hasEmptyFields = true;
-                }
-            });
+            // allInputs.forEach((input) => {
+            //     if (!input.value.trim()) {
+            //         hasEmptyFields = true;
+            //     }
+            // });
             
-            if (hasEmptyFields) {
-                alert('يرجى ملء جميع الحقول المطلوبة قبل التحميل');
-                return;
-            }
+            // if (hasEmptyFields) {
+            //     alert('يرجى ملء جميع الحقول المطلوبة قبل التحميل');
+            //     return;
+            // }
             
             // التحقق من تحميل مكتبة html2pdf
             if (typeof html2pdf === 'undefined') {
