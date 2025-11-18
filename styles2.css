@@ -144,8 +144,8 @@ flex: 1;
     border-right: 3px double #000;
     border-left: 3px double #000;
     border-bottom: 3px double #000;
-    margin-top: 10px;
-    margin-bottom: 1px;
+    margin-top: 17px;
+    margin-bottom: 3px;
 }
 
 /* Tables */
@@ -233,8 +233,8 @@ flex: 1;
 /* Terms Section */
 .terms-section {
     border: 3px double #000;
-    margin-bottom: 1.2px;
-    margin-top: -7px;
+    margin-bottom: 3px;
+    margin-top: -5px;
 
 }
 
@@ -242,7 +242,7 @@ flex: 1;
     color: rgb(0, 0, 0);
     padding: 5px 4px 0px 0px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .terms-content {
@@ -251,7 +251,7 @@ flex: 1;
 }
 
 .term-item {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.3;
     margin-bottom: 2px;
     text-align: right;
@@ -367,7 +367,7 @@ span.flatpickr-weekday {
 @media print {
     @page {
         size: A4 portrait;
-        margin: 6mm 11mm;
+        margin: 5mm 8mm;
     }
 
     * {
@@ -408,6 +408,8 @@ span.flatpickr-weekday {
         padding: 3px 30px 18px 30px;
         margin: 17px;
         page-break-inside: avoid;
+        transform: scale(0.95);
+        transform-origin: top center;
     }
 
     .header {
@@ -439,8 +441,8 @@ span.flatpickr-weekday {
         border-left: 3px double #000 !important;
         border-bottom: 3px double #000 !important;
         padding: 2px;
-        margin-top: 10px;
-        margin-bottom: 1px;
+        margin-top: 17px;
+        margin-bottom: 3px;
         font-size: 18px;
     }
 
@@ -472,15 +474,15 @@ span.flatpickr-weekday {
 
     .terms-section {
         border: 3px double #000 !important;
-        margin-bottom: 1.2px;
-        margin-top: -7px;
+        margin-bottom: 3px;
+        margin-top: -5px;
         page-break-inside: avoid;
     }
 
     .terms-title {
         color: rgb(0, 0, 0) !important;
         padding: 5px 4px 0px 0px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
     .terms-content {
